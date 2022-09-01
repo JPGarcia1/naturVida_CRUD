@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CapaPresentacion
+{
+    public partial class FrInventario : Form
+    {
+        public FrInventario()
+        {
+            InitializeComponent();
+        }
+
+        private void btnInSalir_Click(object sender, EventArgs e)
+        {
+            FrMenu frMenu = new FrMenu();
+            this.Hide();
+            frMenu.ShowDialog();
+        }
+    }
+}
