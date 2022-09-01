@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbxProInventario = new System.Windows.Forms.ComboBox();
+            this.txtInventarioPro = new System.Windows.Forms.ComboBox();
             this.btnConsultarInventario = new System.Windows.Forms.Button();
             this.GridInventario = new System.Windows.Forms.DataGridView();
             this.btnInSalir = new System.Windows.Forms.Button();
@@ -57,14 +57,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Producto:";
             // 
-            // cbxProInventario
+            // txtInventarioPro
             // 
-            this.cbxProInventario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbxProInventario.FormattingEnabled = true;
-            this.cbxProInventario.Location = new System.Drawing.Point(293, 106);
-            this.cbxProInventario.Name = "cbxProInventario";
-            this.cbxProInventario.Size = new System.Drawing.Size(361, 29);
-            this.cbxProInventario.TabIndex = 2;
+            this.txtInventarioPro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtInventarioPro.FormattingEnabled = true;
+            this.txtInventarioPro.Location = new System.Drawing.Point(293, 106);
+            this.txtInventarioPro.Name = "txtInventarioPro";
+            this.txtInventarioPro.Size = new System.Drawing.Size(361, 29);
+            this.txtInventarioPro.TabIndex = 2;
             // 
             // btnConsultarInventario
             // 
@@ -75,6 +75,7 @@
             this.btnConsultarInventario.TabIndex = 3;
             this.btnConsultarInventario.Text = "Consultar";
             this.btnConsultarInventario.UseVisualStyleBackColor = true;
+            this.btnConsultarInventario.Click += new System.EventHandler(this.btnConsultarInventario_Click);
             // 
             // GridInventario
             // 
@@ -104,7 +105,7 @@
             this.Controls.Add(this.btnInSalir);
             this.Controls.Add(this.GridInventario);
             this.Controls.Add(this.btnConsultarInventario);
-            this.Controls.Add(this.cbxProInventario);
+            this.Controls.Add(this.txtInventarioPro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrInventario";
@@ -119,7 +120,7 @@
 
         private Label label1;
         private Label label2;
-        private ComboBox cbxProInventario;
+        private ComboBox txtInventarioPro;
         private Button btnConsultarInventario;
         private DataGridView GridInventario;
         private Button btnInSalir;

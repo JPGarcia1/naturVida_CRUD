@@ -44,5 +44,12 @@ namespace CapaPresentacion
             this.Hide();
             login.ShowDialog();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrCliente cliente = new FrCliente();
+            this.Hide();
+            cliente.ShowDialog();
+        }
     }
 }

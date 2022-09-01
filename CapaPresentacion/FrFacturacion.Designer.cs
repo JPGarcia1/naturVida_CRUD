@@ -164,7 +164,7 @@
             // btnAddProFacturacion
             // 
             this.btnAddProFacturacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddProFacturacion.Location = new System.Drawing.Point(511, 177);
+            this.btnAddProFacturacion.Location = new System.Drawing.Point(511, 170);
             this.btnAddProFacturacion.Name = "btnAddProFacturacion";
             this.btnAddProFacturacion.Size = new System.Drawing.Size(199, 34);
             this.btnAddProFacturacion.TabIndex = 12;

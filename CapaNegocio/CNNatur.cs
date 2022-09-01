@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using CapaDatos;
 using CapaEntidad;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace CapaNegocio
 {
@@ -42,9 +43,41 @@ namespace CapaNegocio
         {
             return cDNatur.listarProducto();
         }
+        public MySqlDataReader searchPro(int searchPro)
+        {
+            return cDNatur.buscarPro(searchPro);
+        }
+        public void updatePro(CENatur updatePro)
+        {
+            cDNatur.updateProducto(updatePro);
+        }
         public void borrarPro(CENatur borrarPro)
         {
             cDNatur.deleteProducto(borrarPro);
+        }
+        public void insertCli(CENatur insertCli)
+        {
+            cDNatur.insertCliente(insertCli);
+        }
+        public DataTable readCli()
+        {
+            return cDNatur.readCliente();
+        }
+        public DataTable listarCli()
+        {
+            return cDNatur.ListarClientes();
+        }
+        public MySqlDataReader searchCli(int searchCli)
+        {
+            return cDNatur.buscarCliente(searchCli);
+        }
+        public void updateCli(CENatur updateCli)
+        {
+            cDNatur.updateCliente(updateCli);
+        }
+            public void deleteCli(CENatur deleteCli)
+        {
+            cDNatur.DeleteCliente(deleteCli);
         }
     }
 }

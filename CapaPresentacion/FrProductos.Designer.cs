@@ -30,12 +30,27 @@
         {
             this.lblProductoTitulo = new System.Windows.Forms.Label();
             this.groupbxGestionPro = new System.Windows.Forms.GroupBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ingresarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PnlModificarPro = new System.Windows.Forms.Panel();
+            this.txtModCodigo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtConsultModificarPro = new System.Windows.Forms.ComboBox();
+            this.txtCantModificarPro = new System.Windows.Forms.TextBox();
+            this.txtValModificarPro = new System.Windows.Forms.TextBox();
+            this.txtDescripModificarPro = new System.Windows.Forms.TextBox();
+            this.btnConsultModificarPro = new System.Windows.Forms.Button();
+            this.btnSaveModificarPro = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.PnlConsultarPro = new System.Windows.Forms.Panel();
             this.txtConsultarPro = new System.Windows.Forms.ComboBox();
             this.GridConsultarPro = new System.Windows.Forms.DataGridView();
-            this.proCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultarPro = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.PnlEliminarPro = new System.Windows.Forms.Panel();
@@ -43,6 +58,7 @@
             this.txtEliminarPro = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.PnlIngresarPro = new System.Windows.Forms.Panel();
+            this.txtInProCodigo = new System.Windows.Forms.NumericUpDown();
             this.txtInProCantidad = new System.Windows.Forms.TextBox();
             this.txtInProValor = new System.Windows.Forms.TextBox();
             this.txtInProDescripcion = new System.Windows.Forms.TextBox();
@@ -52,31 +68,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblInProCodigo = new System.Windows.Forms.Label();
-            this.PnlModificarPro = new System.Windows.Forms.Panel();
-            this.cbxConModificar = new System.Windows.Forms.ComboBox();
-            this.txtCanModificar = new System.Windows.Forms.TextBox();
-            this.txtDesModificar = new System.Windows.Forms.TextBox();
-            this.txtCodModificar = new System.Windows.Forms.TextBox();
-            this.btnConModificar = new System.Windows.Forms.Button();
-            this.btnSaveModificar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ingresarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProSalir = new System.Windows.Forms.Button();
-            this.txtInProCodigo = new System.Windows.Forms.NumericUpDown();
             this.groupbxGestionPro.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.PnlModificarPro.SuspendLayout();
             this.PnlConsultarPro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridConsultarPro)).BeginInit();
             this.PnlEliminarPro.SuspendLayout();
             this.PnlIngresarPro.SuspendLayout();
-            this.PnlModificarPro.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtInProCodigo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,8 +91,8 @@
             // 
             // groupbxGestionPro
             // 
-            this.groupbxGestionPro.Controls.Add(this.PnlIngresarPro);
             this.groupbxGestionPro.Controls.Add(this.menuStrip1);
+            this.groupbxGestionPro.Controls.Add(this.PnlIngresarPro);
             this.groupbxGestionPro.Controls.Add(this.PnlModificarPro);
             this.groupbxGestionPro.Controls.Add(this.PnlConsultarPro);
             this.groupbxGestionPro.Controls.Add(this.PnlEliminarPro);
@@ -102,6 +101,180 @@
             this.groupbxGestionPro.Size = new System.Drawing.Size(776, 354);
             this.groupbxGestionPro.TabIndex = 1;
             this.groupbxGestionPro.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresarProductoToolStripMenuItem,
+            this.consultarProductoToolStripMenuItem,
+            this.modificarProductoToolStripMenuItem,
+            this.eliminarProductoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(3, 19);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(770, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ingresarProductoToolStripMenuItem
+            // 
+            this.ingresarProductoToolStripMenuItem.Name = "ingresarProductoToolStripMenuItem";
+            this.ingresarProductoToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.ingresarProductoToolStripMenuItem.Text = "Ingresar Producto";
+            this.ingresarProductoToolStripMenuItem.Click += new System.EventHandler(this.ingresarProductoToolStripMenuItem_Click);
+            // 
+            // consultarProductoToolStripMenuItem
+            // 
+            this.consultarProductoToolStripMenuItem.Name = "consultarProductoToolStripMenuItem";
+            this.consultarProductoToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.consultarProductoToolStripMenuItem.Text = "Consultar Producto";
+            this.consultarProductoToolStripMenuItem.Click += new System.EventHandler(this.consultarProductoToolStripMenuItem_Click);
+            // 
+            // modificarProductoToolStripMenuItem
+            // 
+            this.modificarProductoToolStripMenuItem.Name = "modificarProductoToolStripMenuItem";
+            this.modificarProductoToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.modificarProductoToolStripMenuItem.Text = "Modificar Producto";
+            this.modificarProductoToolStripMenuItem.Click += new System.EventHandler(this.modificarProductoToolStripMenuItem_Click);
+            // 
+            // eliminarProductoToolStripMenuItem
+            // 
+            this.eliminarProductoToolStripMenuItem.Name = "eliminarProductoToolStripMenuItem";
+            this.eliminarProductoToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.eliminarProductoToolStripMenuItem.Text = "Eliminar Producto";
+            this.eliminarProductoToolStripMenuItem.Click += new System.EventHandler(this.eliminarProductoToolStripMenuItem_Click);
+            // 
+            // PnlModificarPro
+            // 
+            this.PnlModificarPro.Controls.Add(this.txtModCodigo);
+            this.PnlModificarPro.Controls.Add(this.label9);
+            this.PnlModificarPro.Controls.Add(this.txtConsultModificarPro);
+            this.PnlModificarPro.Controls.Add(this.txtCantModificarPro);
+            this.PnlModificarPro.Controls.Add(this.txtValModificarPro);
+            this.PnlModificarPro.Controls.Add(this.txtDescripModificarPro);
+            this.PnlModificarPro.Controls.Add(this.btnConsultModificarPro);
+            this.PnlModificarPro.Controls.Add(this.btnSaveModificarPro);
+            this.PnlModificarPro.Controls.Add(this.label5);
+            this.PnlModificarPro.Controls.Add(this.label6);
+            this.PnlModificarPro.Controls.Add(this.label7);
+            this.PnlModificarPro.Controls.Add(this.label8);
+            this.PnlModificarPro.Location = new System.Drawing.Point(17, 46);
+            this.PnlModificarPro.Name = "PnlModificarPro";
+            this.PnlModificarPro.Size = new System.Drawing.Size(743, 286);
+            this.PnlModificarPro.TabIndex = 7;
+            this.PnlModificarPro.Visible = false;
+            // 
+            // txtModCodigo
+            // 
+            this.txtModCodigo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtModCodigo.Location = new System.Drawing.Point(353, 69);
+            this.txtModCodigo.Name = "txtModCodigo";
+            this.txtModCodigo.Size = new System.Drawing.Size(200, 29);
+            this.txtModCodigo.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(192, 72);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 21);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Código";
+            // 
+            // txtConsultModificarPro
+            // 
+            this.txtConsultModificarPro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtConsultModificarPro.FormattingEnabled = true;
+            this.txtConsultModificarPro.Location = new System.Drawing.Point(286, 16);
+            this.txtConsultModificarPro.Name = "txtConsultModificarPro";
+            this.txtConsultModificarPro.Size = new System.Drawing.Size(200, 29);
+            this.txtConsultModificarPro.TabIndex = 11;
+            // 
+            // txtCantModificarPro
+            // 
+            this.txtCantModificarPro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCantModificarPro.Location = new System.Drawing.Point(353, 202);
+            this.txtCantModificarPro.Name = "txtCantModificarPro";
+            this.txtCantModificarPro.Size = new System.Drawing.Size(200, 29);
+            this.txtCantModificarPro.TabIndex = 10;
+            // 
+            // txtValModificarPro
+            // 
+            this.txtValModificarPro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtValModificarPro.Location = new System.Drawing.Point(353, 157);
+            this.txtValModificarPro.Name = "txtValModificarPro";
+            this.txtValModificarPro.Size = new System.Drawing.Size(200, 29);
+            this.txtValModificarPro.TabIndex = 9;
+            // 
+            // txtDescripModificarPro
+            // 
+            this.txtDescripModificarPro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDescripModificarPro.Location = new System.Drawing.Point(353, 111);
+            this.txtDescripModificarPro.Name = "txtDescripModificarPro";
+            this.txtDescripModificarPro.Size = new System.Drawing.Size(200, 29);
+            this.txtDescripModificarPro.TabIndex = 8;
+            // 
+            // btnConsultModificarPro
+            // 
+            this.btnConsultModificarPro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConsultModificarPro.Location = new System.Drawing.Point(509, 14);
+            this.btnConsultModificarPro.Name = "btnConsultModificarPro";
+            this.btnConsultModificarPro.Size = new System.Drawing.Size(123, 36);
+            this.btnConsultModificarPro.TabIndex = 6;
+            this.btnConsultModificarPro.Text = "Consultar";
+            this.btnConsultModificarPro.UseVisualStyleBackColor = true;
+            this.btnConsultModificarPro.Click += new System.EventHandler(this.btnConsultModificarPro_Click);
+            // 
+            // btnSaveModificarPro
+            // 
+            this.btnSaveModificarPro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSaveModificarPro.Location = new System.Drawing.Point(321, 241);
+            this.btnSaveModificarPro.Name = "btnSaveModificarPro";
+            this.btnSaveModificarPro.Size = new System.Drawing.Size(123, 36);
+            this.btnSaveModificarPro.TabIndex = 4;
+            this.btnSaveModificarPro.Text = "Guardar";
+            this.btnSaveModificarPro.UseVisualStyleBackColor = true;
+            this.btnSaveModificarPro.Click += new System.EventHandler(this.btnSaveModificarPro_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(192, 205);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 21);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Cantidad:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(192, 114);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 21);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Descripción:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(191, 160);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 21);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Valor:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(125, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 21);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Producto:";
             // 
             // PnlConsultarPro
             // 
@@ -127,30 +300,11 @@
             // GridConsultarPro
             // 
             this.GridConsultarPro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridConsultarPro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.proCodigo,
-            this.proDescripcion,
-            this.proValor});
             this.GridConsultarPro.Location = new System.Drawing.Point(180, 124);
             this.GridConsultarPro.Name = "GridConsultarPro";
             this.GridConsultarPro.RowTemplate.Height = 25;
             this.GridConsultarPro.Size = new System.Drawing.Size(386, 133);
             this.GridConsultarPro.TabIndex = 8;
-            // 
-            // proCodigo
-            // 
-            this.proCodigo.HeaderText = "Codigo";
-            this.proCodigo.Name = "proCodigo";
-            // 
-            // proDescripcion
-            // 
-            this.proDescripcion.HeaderText = "Descripcion";
-            this.proDescripcion.Name = "proDescripcion";
-            // 
-            // proValor
-            // 
-            this.proValor.HeaderText = "Valor";
-            this.proValor.Name = "proValor";
             // 
             // btnConsultarPro
             // 
@@ -231,6 +385,15 @@
             this.PnlIngresarPro.Size = new System.Drawing.Size(743, 286);
             this.PnlIngresarPro.TabIndex = 1;
             this.PnlIngresarPro.Visible = false;
+            // 
+            // txtInProCodigo
+            // 
+            this.txtInProCodigo.Enabled = false;
+            this.txtInProCodigo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtInProCodigo.Location = new System.Drawing.Point(375, 36);
+            this.txtInProCodigo.Name = "txtInProCodigo";
+            this.txtInProCodigo.Size = new System.Drawing.Size(179, 29);
+            this.txtInProCodigo.TabIndex = 18;
             // 
             // txtInProCantidad
             // 
@@ -318,158 +481,6 @@
             this.lblInProCodigo.TabIndex = 0;
             this.lblInProCodigo.Text = "Código:";
             // 
-            // PnlModificarPro
-            // 
-            this.PnlModificarPro.Controls.Add(this.cbxConModificar);
-            this.PnlModificarPro.Controls.Add(this.txtCanModificar);
-            this.PnlModificarPro.Controls.Add(this.txtDesModificar);
-            this.PnlModificarPro.Controls.Add(this.txtCodModificar);
-            this.PnlModificarPro.Controls.Add(this.btnConModificar);
-            this.PnlModificarPro.Controls.Add(this.btnSaveModificar);
-            this.PnlModificarPro.Controls.Add(this.label5);
-            this.PnlModificarPro.Controls.Add(this.label6);
-            this.PnlModificarPro.Controls.Add(this.label7);
-            this.PnlModificarPro.Controls.Add(this.label8);
-            this.PnlModificarPro.Location = new System.Drawing.Point(17, 46);
-            this.PnlModificarPro.Name = "PnlModificarPro";
-            this.PnlModificarPro.Size = new System.Drawing.Size(743, 286);
-            this.PnlModificarPro.TabIndex = 7;
-            this.PnlModificarPro.Visible = false;
-            // 
-            // cbxConModificar
-            // 
-            this.cbxConModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbxConModificar.FormattingEnabled = true;
-            this.cbxConModificar.Location = new System.Drawing.Point(354, 13);
-            this.cbxConModificar.Name = "cbxConModificar";
-            this.cbxConModificar.Size = new System.Drawing.Size(200, 29);
-            this.cbxConModificar.TabIndex = 11;
-            // 
-            // txtCanModificar
-            // 
-            this.txtCanModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCanModificar.Location = new System.Drawing.Point(354, 191);
-            this.txtCanModificar.Name = "txtCanModificar";
-            this.txtCanModificar.Size = new System.Drawing.Size(200, 29);
-            this.txtCanModificar.TabIndex = 10;
-            // 
-            // txtDesModificar
-            // 
-            this.txtDesModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDesModificar.Location = new System.Drawing.Point(354, 146);
-            this.txtDesModificar.Name = "txtDesModificar";
-            this.txtDesModificar.Size = new System.Drawing.Size(200, 29);
-            this.txtDesModificar.TabIndex = 9;
-            // 
-            // txtCodModificar
-            // 
-            this.txtCodModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCodModificar.Location = new System.Drawing.Point(354, 100);
-            this.txtCodModificar.Name = "txtCodModificar";
-            this.txtCodModificar.Size = new System.Drawing.Size(200, 29);
-            this.txtCodModificar.TabIndex = 8;
-            // 
-            // btnConModificar
-            // 
-            this.btnConModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnConModificar.Location = new System.Drawing.Point(322, 51);
-            this.btnConModificar.Name = "btnConModificar";
-            this.btnConModificar.Size = new System.Drawing.Size(123, 36);
-            this.btnConModificar.TabIndex = 6;
-            this.btnConModificar.Text = "Consultar";
-            this.btnConModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveModificar
-            // 
-            this.btnSaveModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSaveModificar.Location = new System.Drawing.Point(322, 230);
-            this.btnSaveModificar.Name = "btnSaveModificar";
-            this.btnSaveModificar.Size = new System.Drawing.Size(123, 36);
-            this.btnSaveModificar.TabIndex = 4;
-            this.btnSaveModificar.Text = "Guardar";
-            this.btnSaveModificar.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(193, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 21);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Cantidad:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(193, 103);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 21);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Código:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(192, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 21);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Descripción:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(193, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 21);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Producto:";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarProductoToolStripMenuItem,
-            this.consultarProductoToolStripMenuItem,
-            this.modificarProductoToolStripMenuItem,
-            this.eliminarProductoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 19);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(770, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ingresarProductoToolStripMenuItem
-            // 
-            this.ingresarProductoToolStripMenuItem.Name = "ingresarProductoToolStripMenuItem";
-            this.ingresarProductoToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
-            this.ingresarProductoToolStripMenuItem.Text = "Ingresar Producto";
-            this.ingresarProductoToolStripMenuItem.Click += new System.EventHandler(this.ingresarProductoToolStripMenuItem_Click);
-            // 
-            // consultarProductoToolStripMenuItem
-            // 
-            this.consultarProductoToolStripMenuItem.Name = "consultarProductoToolStripMenuItem";
-            this.consultarProductoToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
-            this.consultarProductoToolStripMenuItem.Text = "Consultar Producto";
-            this.consultarProductoToolStripMenuItem.Click += new System.EventHandler(this.consultarProductoToolStripMenuItem_Click);
-            // 
-            // modificarProductoToolStripMenuItem
-            // 
-            this.modificarProductoToolStripMenuItem.Name = "modificarProductoToolStripMenuItem";
-            this.modificarProductoToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
-            this.modificarProductoToolStripMenuItem.Text = "Modificar Producto";
-            this.modificarProductoToolStripMenuItem.Click += new System.EventHandler(this.modificarProductoToolStripMenuItem_Click);
-            // 
-            // eliminarProductoToolStripMenuItem
-            // 
-            this.eliminarProductoToolStripMenuItem.Name = "eliminarProductoToolStripMenuItem";
-            this.eliminarProductoToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.eliminarProductoToolStripMenuItem.Text = "Eliminar Producto";
-            this.eliminarProductoToolStripMenuItem.Click += new System.EventHandler(this.eliminarProductoToolStripMenuItem_Click);
-            // 
             // btnProSalir
             // 
             this.btnProSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -480,15 +491,6 @@
             this.btnProSalir.Text = "Salir";
             this.btnProSalir.UseVisualStyleBackColor = true;
             this.btnProSalir.Click += new System.EventHandler(this.btnProSalir_Click);
-            // 
-            // txtInProCodigo
-            // 
-            this.txtInProCodigo.Enabled = false;
-            this.txtInProCodigo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtInProCodigo.Location = new System.Drawing.Point(375, 36);
-            this.txtInProCodigo.Name = "txtInProCodigo";
-            this.txtInProCodigo.Size = new System.Drawing.Size(179, 29);
-            this.txtInProCodigo.TabIndex = 18;
             // 
             // FrProductos
             // 
@@ -504,6 +506,10 @@
             this.Load += new System.EventHandler(this.FrProductos_Load);
             this.groupbxGestionPro.ResumeLayout(false);
             this.groupbxGestionPro.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.PnlModificarPro.ResumeLayout(false);
+            this.PnlModificarPro.PerformLayout();
             this.PnlConsultarPro.ResumeLayout(false);
             this.PnlConsultarPro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridConsultarPro)).EndInit();
@@ -511,10 +517,6 @@
             this.PnlEliminarPro.PerformLayout();
             this.PnlIngresarPro.ResumeLayout(false);
             this.PnlIngresarPro.PerformLayout();
-            this.PnlModificarPro.ResumeLayout(false);
-            this.PnlModificarPro.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtInProCodigo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -539,12 +541,12 @@
         private Label label1;
         private Label lblInProCodigo;
         private Panel PnlModificarPro;
-        private ComboBox cbxConModificar;
-        private TextBox txtCanModificar;
-        private TextBox txtDesModificar;
-        private TextBox txtCodModificar;
-        private Button btnConModificar;
-        private Button btnSaveModificar;
+        private ComboBox txtConsultModificarPro;
+        private TextBox txtCantModificarPro;
+        private TextBox txtValModificarPro;
+        private TextBox txtDescripModificarPro;
+        private Button btnConsultModificarPro;
+        private Button btnSaveModificarPro;
         private Label label5;
         private Label label6;
         private Label label7;
@@ -561,9 +563,8 @@
         private Button btnProSalir;
         private TextBox txtInProCantidad;
         private TextBox txtInProValor;
-        private DataGridViewTextBoxColumn proCodigo;
-        private DataGridViewTextBoxColumn proDescripcion;
-        private DataGridViewTextBoxColumn proValor;
         private NumericUpDown txtInProCodigo;
+        private TextBox txtModCodigo;
+        private Label label9;
     }
 }
